@@ -21,6 +21,7 @@ public class WHRData {
     @Column(name = "result")
     private BigDecimal result;
 
+
     @Column(name = "created")
     private LocalDateTime created;
 
@@ -47,6 +48,7 @@ public class WHRData {
     public BigDecimal getWaistSize() {
         return waistSize;
     }
+
 
     public BigDecimal getHipSize() {
         return hipSize;
