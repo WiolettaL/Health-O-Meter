@@ -15,6 +15,9 @@ public class WHRData {
     @Column(name="waist_size")
     private BigDecimal waistSize;
 
+    @Column(name="hip_size")
+    private BigDecimal hipSize;
+
     @Column(name = "result")
     private BigDecimal result;
 
@@ -28,9 +31,10 @@ public class WHRData {
     public WHRData() {
     }
 
-    public WHRData(long id, BigDecimal waistSize, BigDecimal result, Contact contact) {
+    public WHRData(long id, BigDecimal waistSize, BigDecimal hipSize, BigDecimal result, Contact contact) {
         this.id = id;
         this.waistSize = waistSize;
+        this.hipSize = hipSize;
         this.result = result;
         this.created = LocalDateTime.now();
         this.contact = contact;
@@ -38,6 +42,14 @@ public class WHRData {
 
     public long getId() {
         return id;
+    }
+
+    public BigDecimal getWaistSize() {
+        return waistSize;
+    }
+
+    public BigDecimal getHipSize() {
+        return hipSize;
     }
 
     public BigDecimal getResult() {
@@ -54,6 +66,14 @@ public class WHRData {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public void setWaistSize(BigDecimal waistSize) {
+        this.waistSize = waistSize;
+    }
+
+    public void setHipSize(BigDecimal hipSize) {
+        this.hipSize = hipSize;
     }
 
     public void setResult(BigDecimal result) {
