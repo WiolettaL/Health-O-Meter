@@ -12,6 +12,9 @@ public class WHRData {
     @Column(name = "id")
     private long id;
 
+    @Column(name="waist_size")
+    private BigDecimal waistSize;
+
     @Column(name = "result")
     private BigDecimal result;
 
@@ -25,8 +28,9 @@ public class WHRData {
     public WHRData() {
     }
 
-    public WHRData(long id, BigDecimal result, Contact contact) {
+    public WHRData(long id, BigDecimal waistSize, BigDecimal result, Contact contact) {
         this.id = id;
+        this.waistSize = waistSize;
         this.result = result;
         this.created = LocalDateTime.now();
         this.contact = contact;

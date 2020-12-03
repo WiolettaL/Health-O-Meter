@@ -97,7 +97,6 @@ public class HistoricalCalculatorsResults {
         this.created = created;
     }
 
-    public void setContact(Contact contact) {
-        this.contact = contact;
+    public void setContact(Contact contact) { this.contact = contact;
     }
 }
